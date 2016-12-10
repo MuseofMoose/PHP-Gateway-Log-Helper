@@ -19,7 +19,7 @@ public function UpdateUserPassword(userId, oldPassword, newPassword){
   //Rest of the code........
 }
 ```
-And you call like so:
+And you call said function like so:
 ```
 UpdateUserPassword(5, 'preciouspotato', 'magicalostrich');
 ```
