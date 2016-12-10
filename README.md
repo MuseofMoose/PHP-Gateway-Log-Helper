@@ -29,7 +29,7 @@ ClassName::UpdateUserPassword call with params : userId = 5
 ```
 Notice how the two params in the exclusion array are not in the log.
 
-You might next ask, what if there are no params at all?
+You might next ask, "What if there are no params at all?"
 Then you would end up with a log that looks like this:
 ```
 ClassName::SomeFunction call without params
