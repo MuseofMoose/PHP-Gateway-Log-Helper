@@ -27,7 +27,8 @@ This would create a debug log that looks like this:
 ```
 ClassName::UpdateUserPassword call with params : userId = 5
 ```
-Notice how the two params passed in the exclusion array are excluded from the log.
+Notice how the two params in the exclusion array are not in the log.
+
 You might next ask, what if there are no params at all?
 Then you would end up with a log that looks like this:
 ```
