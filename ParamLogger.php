@@ -8,9 +8,11 @@
 public function CreateParameterLog($logType, $excludedParamsArray = null){
     if (!is_string($logType)){
         $this->log->error('$logType must be a String');
+        return;
     }
     if (!is_null($excludedParamsArray) && !is_array($excludedParamsArray)){
         $this->log->error('$excludedParamsArray must be an Array');
+        return;
     }
     $backtrace = debug_backtrace()[1];
     $className = $backtrace['class'];
@@ -29,15 +31,13 @@ public function CreateParameterLog($logType, $excludedParamsArray = null){
     foreach ($reflectionParams as $index => $param){
         $message = $message . ' ' . $param . '=' . $args[$index];
     }
-    switch ($logType){
-        case 'error':
-            $this->log->error($message);
-            break;
-        case 'info':
-            $this->log->info($message);
-            break;
-        default:
-            $this->log->debug($message);
-            break;
+    if ($logType === 'error'){
+        $this->log->error($message);
+    }
+    else if ($logType === 'info'){
+        $this->log->info($message);
+    }
+    else {
+        $this->log->debug($message);
     }
 }
