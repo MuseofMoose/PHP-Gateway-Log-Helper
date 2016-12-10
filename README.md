@@ -1,5 +1,5 @@
 # PHP-Param-Log-Helper
-This PHP snippet is a simple helper I built to log params that are being passed through the gateway functions of an API. It performs a backtrace to fetch the current class and function name and then uses them to create a reflection object. From there we can fetch the param names and pair them with their respective passed in values.
+This PHP snippet is a simple helper to log params that are being passed through the gateway functions of an API. It performs a backtrace to fetch the current class and function name and then uses them to create a reflection object. From there we can fetch the param names and pair them with their respective passed in values.
 
 ### Note:
 The current implementation has a dependency on apache log4php and the Logger object is initialized in the constructor of the class (and not included in this snippet). Feel free to use your own logging service and simply replace all instances of "$this->log->....." with the logging syntax of your own selection.
