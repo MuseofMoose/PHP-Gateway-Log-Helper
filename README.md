@@ -35,5 +35,5 @@ Then you would end up with a log that looks like this:
 ClassName::SomeFunction call without params
 ```
 ### Todo:
-Enhance this readMe.
-Take a second look as far as optimization is concerned.
+* Enhance this readMe.
+* Take a second look as far as optimization is concerned.
